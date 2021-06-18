@@ -47,7 +47,7 @@ const IndexPage = () => {
       </div>
       <ShoeSize setShoeSize = {setShoeSize}/>
       <div>
-        Cards
+        Select Cards
       </div>
       <Cards usedCards={usedCards} setUsedCards = {setUsedCards} setRunningCount = {setrunningCount} runningCount = {runningCount}/>
       <div>
