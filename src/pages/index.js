@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-
 import Cards from '../components/Cards.js'
 import RunningCount from '../components/RunningCount';
 import ShoeSize from '../components/ShoeSize';
 import DeckPen from '../components/DeckPen';
+import Unit from '../components/Unit'
 
 import styled from 'styled-components'
 
@@ -13,6 +13,9 @@ const InfoContainer = styled.div`
   display: flex;
 `
 
+const Container = styled.div`
+    margin: 0 0 0 10px;
+`
 
 // markup
 const IndexPage = () => {
@@ -35,7 +38,6 @@ const IndexPage = () => {
    return Math.round(remaingingDecks * 100) / 100
  }
 
-
  const calcTrueCount = () =>{
    if(runningCount == 0) return 0
    let num
@@ -43,9 +45,6 @@ const IndexPage = () => {
    
    return Math.round(num * 100) / 100
  }
-
-
-
 
   return (
    <>
@@ -56,6 +55,11 @@ const IndexPage = () => {
         </div>
         <ShoeSize setShoeSize = {setShoeSize}/>
       </InfoContainer>
+      <InfoContainer>
+        <div>Unit Size</div>
+        <Unit></Unit>
+
+      </InfoContainer>
       <div>
         Select Cards
       </div>
@@ -64,7 +68,7 @@ const IndexPage = () => {
         <div>
           Running Count:
         </div>
-        <RunningCount  runningCount = {runningCount}/>
+        <RunningCount runningCount = {runningCount}/>
       </InfoContainer>
       <InfoContainer>
         <div>
@@ -76,9 +80,9 @@ const IndexPage = () => {
         <div>
           True Count:
         </div>
-        <div>
+        <Container>
           {calcTrueCount()}
-        </div>
+        </Container>
       </InfoContainer>
       <InfoContainer>
         <div>
@@ -88,8 +92,6 @@ const IndexPage = () => {
           
         </div>
       </InfoContainer>
-
-        
     </div>
    </>
   )

@@ -1,4 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+    margin: 0 0 0 10px;
+`
 
 function ShoeSize(props) {
     const {setShoeSize} = props
@@ -10,7 +16,7 @@ function ShoeSize(props) {
     }
 
     return (
-        <div>
+        <Container>
             <select onChange={getShoeSize}>
                 <option value={1}>{1}</option>
                 <option value={2}>{2}</option>
@@ -21,7 +27,7 @@ function ShoeSize(props) {
                 <option value={7}>{7}</option>
                 <option value={8}>{8}</option>
             </select>
-        </div>
+        </Container>
         
     )
 }
