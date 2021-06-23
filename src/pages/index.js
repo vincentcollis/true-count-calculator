@@ -6,6 +6,14 @@ import RunningCount from '../components/RunningCount';
 import ShoeSize from '../components/ShoeSize';
 import DeckPen from '../components/DeckPen';
 
+import styled from 'styled-components'
+
+// styled componets
+const InfoContainer = styled.div`
+  display: flex;
+`
+
+
 // markup
 const IndexPage = () => {
 
@@ -42,30 +50,37 @@ const IndexPage = () => {
   return (
    <>
     <div className="App">
-      <div>
-        Shoe Size:
-      </div>
-      <ShoeSize setShoeSize = {setShoeSize}/>
+      <InfoContainer>
+        <div>
+          Shoe Size:
+        </div>
+        <ShoeSize setShoeSize = {setShoeSize}/>
+      </InfoContainer>
       <div>
         Select Cards
       </div>
       <Cards usedCards={usedCards} setUsedCards = {setUsedCards} setRunningCount = {setrunningCount} runningCount = {runningCount}/>
-      <div>
-        Running Count:
-      </div>
-      <RunningCount  runningCount = {runningCount}/>
-      <div>
-        Decks Remaining
-      </div>
-      <div>
-      {/* <DeckPen shoeSize = {shoeSize} deckPen = {deckPen} usedCards={usedCards} setdeckPen = {setdeckPen} /> */}
-      <DeckPen calcDeckPen = {calcDeckPen} />
-      </div>
+      <InfoContainer>
+        <div>
+          Running Count:
+        </div>
+        <RunningCount  runningCount = {runningCount}/>
+      </InfoContainer>
+      <InfoContainer>
+        <div>
+          Decks Remaining
+        </div>
+        <DeckPen calcDeckPen = {calcDeckPen} />  
+      </InfoContainer>
+      
       <div>
         True Count
       </div>
       <div>
         {calcTrueCount()}
+      </div>
+      <div>
+        Bet Size:
       </div>
         
     </div>
