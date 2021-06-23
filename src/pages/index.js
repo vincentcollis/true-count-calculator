@@ -68,20 +68,27 @@ const IndexPage = () => {
       </InfoContainer>
       <InfoContainer>
         <div>
-          Decks Remaining
+          Decks Remaining:
         </div>
         <DeckPen calcDeckPen = {calcDeckPen} />  
       </InfoContainer>
-      
-      <div>
-        True Count
-      </div>
-      <div>
-        {calcTrueCount()}
-      </div>
-      <div>
-        Bet Size:
-      </div>
+      <InfoContainer>
+        <div>
+          True Count:
+        </div>
+        <div>
+          {calcTrueCount()}
+        </div>
+      </InfoContainer>
+      <InfoContainer>
+        <div>
+          Bet Size:
+        </div>
+        <div>
+          
+        </div>
+      </InfoContainer>
+
         
     </div>
    </>
