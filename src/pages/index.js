@@ -56,6 +56,7 @@ const IndexPage = () => {
         </div>
         <ShoeSize setShoeSize = {setShoeSize}/>
       </InfoContainer>
+      
       <InfoContainer>
         <div>Unit Size</div>
         <Unit setUnit = {setUnit}></Unit>
