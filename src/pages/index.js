@@ -25,6 +25,7 @@ const IndexPage = () => {
  const [trueCount, setTrueCount] = useState(0)
  const [shoeSize, setShoeSize] = useState(1)
  const [usedCards, setUsedCards] = useState(0)
+ const [unit, setUnit] = useState(0)
  //Must create deckPen state LAST
  // const [deckPen, setdeckPen] = useState(0)
  
@@ -57,7 +58,7 @@ const IndexPage = () => {
       </InfoContainer>
       <InfoContainer>
         <div>Unit Size</div>
-        <Unit></Unit>
+        <Unit setUnit = {setUnit}></Unit>
 
       </InfoContainer>
       <div>
