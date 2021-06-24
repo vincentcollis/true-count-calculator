@@ -54,17 +54,17 @@ function Cards(props) {
 
         switch (key) {
             case "1":
-                console.log("3")
+                // console.log("3")
                 setnumPressed(-1)
                 update(-1)
                 break
             case "2":
-                console.log("2")
+                // console.log("2")
                 setnumPressed(0)
                 update(0)
                 break
             case "3":
-                console.log("1")
+                // console.log("1")
                 setnumPressed(1)
                 update(1)
                 break

@@ -5,6 +5,7 @@ import RunningCount from '../components/RunningCount';
 import ShoeSize from '../components/ShoeSize';
 import DeckPen from '../components/DeckPen';
 import Unit from '../components/Unit'
+import BetSize from '../components/BetSize.js';
 
 import styled from 'styled-components'
 
@@ -22,10 +23,10 @@ const IndexPage = () => {
 
   // state
  const [runningCount, setrunningCount] = useState(0)
-//  const [trueCount, setTrueCount] = useState(0)
  const [shoeSize, setShoeSize] = useState(1)
  const [usedCards, setUsedCards] = useState(0)
  const [unit, setUnit] = useState(10)
+//  const [betSize, setBetSize] = useState(0)
  //Must create deckPen state LAST
  // const [deckPen, setdeckPen] = useState(0)
  
@@ -40,14 +41,23 @@ const IndexPage = () => {
  }
 
  const calcTrueCount = () =>{
+
    if(runningCount == 0) return 0
-   let num
-   num = runningCount / calcDeckPen()
+
+   let num = runningCount / calcDeckPen()
    
    return Math.round(num * 100) / 100
  }
 
- console.log(unit)
+  function calcBetSize(truecount, bet){
+    if (truecount < 2) return bet*1
+    if (truecount >= 2 && truecount < 3) return bet*2
+    if (truecount >= 3 && truecount < 4) return bet*4
+    if (truecount >= 4) return bet*8
+    
+    return 0
+  }
+
   return (
    <>
     <div className="App">
@@ -91,9 +101,10 @@ const IndexPage = () => {
         <div>
           Bet Size:
         </div>
-        <div>
-          
-        </div>
+        <Container>
+        {calcBetSize(calcTrueCount(),unit)}
+        </Container>
+        {/* <BetSize unit={unit} calcTrueCount={calcTrueCount} setBetSize={setBetSize} betSize={betSize}/> */}
       </InfoContainer>
     </div>
    </>
