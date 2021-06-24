@@ -22,10 +22,10 @@ const IndexPage = () => {
 
   // state
  const [runningCount, setrunningCount] = useState(0)
- const [trueCount, setTrueCount] = useState(0)
+//  const [trueCount, setTrueCount] = useState(0)
  const [shoeSize, setShoeSize] = useState(1)
  const [usedCards, setUsedCards] = useState(0)
- const [unit, setUnit] = useState(0)
+ const [unit, setUnit] = useState(10)
  //Must create deckPen state LAST
  // const [deckPen, setdeckPen] = useState(0)
  
@@ -47,6 +47,7 @@ const IndexPage = () => {
    return Math.round(num * 100) / 100
  }
 
+ console.log(unit)
   return (
    <>
     <div className="App">
