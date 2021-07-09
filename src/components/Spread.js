@@ -23,8 +23,9 @@ export default function Spread(props) {
     let betSpread = [oneToEight,oneToTen,oneToTwelve]
 
     let clickHandler = (event) => {
-        console.log(event.target.dataset)
-        // setBetSpread[event.target.dataset]
+        
+        // setBetSpread[event.target.dataset.value]
+        // console.log(event.target.dataset.value)
     }
 
     return (
