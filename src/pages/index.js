@@ -27,6 +27,7 @@ const IndexPage = () => {
  const [shoeSize, setShoeSize] = useState(1)
  const [usedCards, setUsedCards] = useState(0)
  const [unit, setUnit] = useState(10)
+ const [betSpread, setBetSpread] = useState(1)
 //  const [betSize, setBetSize] = useState(0)
  //Must create deckPen state LAST
  // const [deckPen, setdeckPen] = useState(0)
@@ -98,8 +99,8 @@ const IndexPage = () => {
           {calcTrueCount()}
         </Container>
       </InfoContainer>
-      <InfoContainer>
-        <Spread></Spread>
+            <InfoContainer>
+        <Spread setBetSpread = {setBetSpread} ></Spread>
       </InfoContainer>
       <InfoContainer>
         <div>
