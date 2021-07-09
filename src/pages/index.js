@@ -52,17 +52,17 @@ const IndexPage = () => {
  }
 
   function calcBetSize(truecount, bet){
-    let multiplyer
+    let multiplier
 
-    if{betSpread = 1} multiplier = [1,2,4,8]
-    if{betSpread = 2} multiplier = [1,3,7,10]
-    if{betSpread = 3} multiplier = [1,4,8,12]
+    if(betSpread == 1) multiplier = [1,2,4,8]
+    if(betSpread == 2) multiplier = [1,3,7,10]
+    if(betSpread == 3) multiplier = [1,4,8,12]
 
 
-    if (truecount < 2) return bet*1
-    if (truecount >= 2 && truecount < 3) return bet*2
-    if (truecount >= 3 && truecount < 4) return bet*4
-    if (truecount >= 4) return bet*8
+    if (truecount < 2) return bet*multiplier[0]
+    if (truecount >= 2 && truecount < 3) return bet*multiplier[1]
+    if (truecount >= 3 && truecount < 4) return bet*multiplier[2]
+    if (truecount >= 4) return bet*multiplier[3]
     
     return 0
   }
