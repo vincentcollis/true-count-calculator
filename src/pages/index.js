@@ -83,10 +83,7 @@ const IndexPage = () => {
         </div>
         <RunningCount runningCount = {runningCount}/>
       </InfoContainer>
-      <InfoContainer>
 
-        <Spread></Spread>
-      </InfoContainer>
       <InfoContainer>
         <div>
           Decks Remaining:
@@ -100,6 +97,9 @@ const IndexPage = () => {
         <Container>
           {calcTrueCount()}
         </Container>
+      </InfoContainer>
+      <InfoContainer>
+        <Spread></Spread>
       </InfoContainer>
       <InfoContainer>
         <div>
