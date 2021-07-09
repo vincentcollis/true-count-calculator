@@ -6,6 +6,7 @@ import ShoeSize from '../components/ShoeSize';
 import DeckPen from '../components/DeckPen';
 import Unit from '../components/Unit'
 import BetSize from '../components/BetSize.js';
+import Spread from '../components/Spread.js';
 
 import styled from 'styled-components'
 
@@ -71,7 +72,6 @@ const IndexPage = () => {
       <InfoContainer>
         <div>Unit Size</div>
         <Unit setUnit = {setUnit}></Unit>
-
       </InfoContainer>
       <div>
         Select Cards
@@ -82,6 +82,10 @@ const IndexPage = () => {
           Running Count:
         </div>
         <RunningCount runningCount = {runningCount}/>
+      </InfoContainer>
+      <InfoContainer>
+
+        <Spread></Spread>
       </InfoContainer>
       <InfoContainer>
         <div>

@@ -24,7 +24,7 @@ export default function Spread() {
         <div>
               {
                 betSpread.map((obj, i) => 
-                    <SpreadButton key={i} data-value={obj.value} onClick={updateHandlerClick} onKeyPress={handleKeyPress}> 
+                    <SpreadButton key={i} data-value={obj.value}> 
                         {obj.name} 
                     </SpreadButton>
                 )
